@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wechat-voice-to-text-echo-bot"
+version = "0.1.0"
+description = "Minimal no-LLM WeChat voice transcription reply bot"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "liujuanjuan1984" }]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+dependencies = [
+  "certifi>=2024.2.2",
+  "qrcode>=8,<9",
+]
+
+[project.urls]
+Repository = "https://github.com/liujuanjuan1984/wechat-voice-to-text-echo-bot"
+
+[project.scripts]
+voice-bot = "voice_bot:main"
+
+[tool.setuptools]
+py-modules = ["voice_bot"]
